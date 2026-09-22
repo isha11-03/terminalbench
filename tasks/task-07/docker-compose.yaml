@@ -1,0 +1,5 @@
+services:
+  task-07:
+    build: .
+    working_dir: /workspace
+    command: bash

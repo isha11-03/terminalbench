@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  task-03:
+    build: .
+    container_name: task-03-retrieval
+    volumes:
+      - .:/task
+    working_dir: /task
+    command: /bin/bash
+    stdin_open: true
+    tty: true

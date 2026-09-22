@@ -1,0 +1,9 @@
+# Deterministic signed stimulus families used by tb_stream.sv
+3 7
+-12 9
+32767 -2
+-32768 1
+-231 -17
+0 -32768
+32767 32767
+-32768 -32768

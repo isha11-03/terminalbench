@@ -1,0 +1,6 @@
+[
+  {"name": "ordinary", "logits": [1.0, 2.0, 3.0], "target": 2},
+  {"name": "large_positive", "logits": [1000.0, 999.0, 998.0], "target": 0},
+  {"name": "large_negative", "logits": [-1000.0, -1001.0, -1002.0], "target": 1},
+  {"name": "wide_range", "logits": [-745.0, -744.0, 0.0, 709.0], "target": 3}
+]

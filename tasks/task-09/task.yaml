@@ -1,0 +1,9 @@
+task:
+  id: task-09
+  name: stateful-data-processing-reliability
+  domain: software-engineering
+  deterministic: true
+  network_required: false
+  instruction: instruction.md
+  solution: solution.sh
+  tests: run-tests.sh

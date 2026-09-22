@@ -1,0 +1,3 @@
+# Task Summary
+
+TASK-05 is a kernel optimization benchmark for segmented reduction of deterministic wide numerical records. It intentionally combines row copying, temporary feature lists, nested dictionary state, and repeated list rebuilding in the baseline. Solvers must investigate the behavior, preserve exact segment outputs and validation semantics, and demonstrate a reproducible throughput improvement with their own implementation.

@@ -1,0 +1,6 @@
+services:
+  task-09:
+    build: .
+    working_dir: /workspace
+    network_mode: none
+    command: ["./run-tests.sh"]

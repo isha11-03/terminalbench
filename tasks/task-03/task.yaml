@@ -1,0 +1,9 @@
+task:
+  id: task-03
+  name: embedding-retrieval-ranking
+  domain: ml-ai
+  deterministic: true
+  network_required: false
+  instruction: instruction.md
+  solution: solution.sh
+  tests: run-tests.sh

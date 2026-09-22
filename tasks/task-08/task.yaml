@@ -1,0 +1,9 @@
+task:
+  id: task-08
+  name: order-service-architecture-refactor
+  domain: software-engineering
+  deterministic: true
+  network_required: false
+  instruction: instruction.md
+  solution: solution.sh
+  tests: run-tests.sh

@@ -1,0 +1,6 @@
+services:
+  task-10:
+    build: .
+    working_dir: /workspace
+    command: bash
+    network_mode: none

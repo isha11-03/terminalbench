@@ -1,0 +1,9 @@
+task:
+  id: task-10
+  name: pipelined-streaming-computation
+  domain: rtl
+  deterministic: true
+  network_required: false
+  instruction: instruction.md
+  solution: solution.sh
+  tests: run-tests.sh

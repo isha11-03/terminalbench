@@ -1,0 +1,6 @@
+task_id,model,rollout,score,full_pass,steps,runtime_seconds,failure_category,notes
+task-02,PENDING,1,PENDING,PENDING,PENDING,PENDING,PENDING,Awaiting validation and rollouts
+task-02,PENDING,2,PENDING,PENDING,PENDING,PENDING,PENDING,Awaiting validation and rollouts
+task-02,PENDING,3,PENDING,PENDING,PENDING,PENDING,PENDING,Awaiting validation and rollouts
+task-02,PENDING,4,PENDING,PENDING,PENDING,PENDING,PENDING,Awaiting validation and rollouts
+task-02,PENDING,5,PENDING,PENDING,PENDING,PENDING,PENDING,Awaiting validation and rollouts

@@ -1,0 +1,1 @@
+"""Kernel package for TASK-05."""

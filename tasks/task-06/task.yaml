@@ -1,0 +1,9 @@
+task:
+  id: task-06
+  name: stable-logsumexp-and-softmax
+  domain: scientific-computing
+  deterministic: true
+  network_required: false
+  instruction: instruction.md
+  solution: solution.sh
+  tests: run-tests.sh

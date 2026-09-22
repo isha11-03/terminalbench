@@ -1,0 +1,9 @@
+task:
+  id: task-02
+  name: time-series-forecasting-pipeline
+  domain: ml-ai
+  deterministic: true
+  network_required: false
+  instruction: instruction.md
+  solution: solution.sh
+  tests: run-tests.sh

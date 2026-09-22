@@ -1,0 +1,9 @@
+task:
+  id: task-01
+  name: ml-inference-pipeline-optimization
+  domain: ml-ai
+  deterministic: true
+  network_required: false
+  instruction: instruction.md
+  solution: solution.sh
+  tests: run-tests.sh
