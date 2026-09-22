@@ -1,6 +1,6 @@
 # Rollout Record
 
-Local rollout evidence: `bash solution.sh` exited 0 with `11 passed`. The
-command uses only the pinned pytest dependency and local source/data files.
-Docker image execution was not available in this validation session; no
-fresh-container result is claimed.
+Local construction evidence: `./solution.sh` followed by the suite exited 0
+with `12 passed` twice. The command uses only the pinned pytest dependency and
+local source/data files. Target-agent rollout scoring was not performed, so no
+model rollout result is claimed.

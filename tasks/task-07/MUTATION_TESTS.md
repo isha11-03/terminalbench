@@ -10,8 +10,8 @@
 | Permit zero, NaN, or fractional controls | invalid-controls case |
 | Add nondeterministic perturbation | deterministic-result case |
 
-Observed validation: the baseline run produced `5 failed, 6 passed`; the
-failures exercise dense conversion, residual/convergence behavior, initial
-guess handling, and fractional iteration validation. The oracle run produced
-`11 passed`. The suite therefore detects the baseline mutations above; no
-additional unexecuted mutation score is claimed.
+Observed validation: the baseline run produced `4 failed, 8 passed`; the
+failures exercise dense conversion, residual/convergence behavior, and initial
+guess handling. The oracle run produced `12 passed` twice. The suite detects
+the listed baseline mutations; no additional unexecuted mutation score is
+claimed.

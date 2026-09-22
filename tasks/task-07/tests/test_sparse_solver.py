@@ -28,6 +28,13 @@ def test_sparse_matvec_does_not_call_dense_conversion():
     assert sparse.matvec([1, 1, 1, 1, 1]) == pytest.approx([3, 2, 2, 2, 3])
 
 
+def test_solver_does_not_call_dense_conversion():
+    sparse = matrix(DATA["tridiagonal"])
+    sparse.to_dense = lambda: (_ for _ in ()).throw(AssertionError("dense conversion"))
+    result = solve_cg(sparse, DATA["tridiagonal"]["b"])
+    assert result["converged"] is True
+
+
 def test_relative_tolerance_and_initial_guess():
     case = DATA["scaled"]
     result = solve_cg(matrix(case), case["b"], tol=1e-6, max_iter=1, x0=[1, 1, 2])
@@ -55,6 +62,10 @@ def test_invalid_controls(kwargs):
 def test_invalid_dimensions_and_loader():
     with pytest.raises(ValueError):
         solve_cg(SparseMatrix([0], [], [], (1, 2)), [1])
+    with pytest.raises(ValueError):
+        solve_cg(matrix(DATA["tridiagonal"]), [1, 2, 3, 4])
+    with pytest.raises(ValueError):
+        solve_cg(matrix(DATA["tridiagonal"]), DATA["tridiagonal"]["b"], x0=[0, 0])
     loaded = load_matrix("data/tridiagonal.json")
     assert loaded.shape == (5, 5)
     assert loaded.matvec([1, 1, 1, 1, 1]) == pytest.approx([3, 2, 2, 2, 3])

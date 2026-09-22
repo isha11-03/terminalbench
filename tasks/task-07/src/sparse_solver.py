@@ -1,4 +1,4 @@
-"""Reference implementation for TASK-07."""
+"""Deliberately flawed baseline for TASK-07."""
 import json
 import math
 
@@ -22,13 +22,9 @@ class SparseMatrix:
         rows, cols = self.shape
         if len(vector) != cols:
             raise ValueError("incompatible vector dimension")
-        result = []
-        for row in range(rows):
-            total = 0.0
-            for pos in range(self.row_ptr[row], self.row_ptr[row + 1]):
-                total += self.values[pos] * vector[self.col_idx[pos]]
-            result.append(total)
-        return result
+        dense = self.to_dense()
+        return [math.fsum(value * entry for value, entry in zip(row, vector))
+                for row in dense]
 
 
 def load_matrix(path):
@@ -52,12 +48,12 @@ def solve_cg(matrix, b, tol=1e-8, max_iter=None, x0=None):
     else:
         if len(x0) != rows:
             raise ValueError("incompatible initial guess")
-        x = [float(value) for value in x0]
+        x = [0.0] * rows
     b = [float(value) for value in b]
     norm_b = math.sqrt(math.fsum(value * value for value in b))
     residual = [rhs - value for rhs, value in zip(b, matrix.matvec(x))]
     residual_norm = math.sqrt(math.fsum(value * value for value in residual))
-    threshold = tol * max(1.0, norm_b)
+    threshold = tol
     if residual_norm <= threshold:
         return {"x": x, "iterations": 0, "residual_norm": residual_norm, "converged": True}
     direction = list(residual)

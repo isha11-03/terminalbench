@@ -2,4 +2,5 @@ services:
   task-07:
     build: .
     working_dir: /workspace
-    command: bash
+    command: bash run-tests.sh
+    network_mode: none
